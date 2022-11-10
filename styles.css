@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    margin: 30px auto;
+    width: 600px;
+}
+   
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+ .auto_atd{
+    margin: 30px;
+    width:  600px;
+    height: 100px;
+    background-color: #EB9320;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;    
+    color: #FFFFFF;
+    line-height: 1.3em;
+} 
+
+.auto_atd:active{
+    background-color: #EBA120;
+}
+
+
+
