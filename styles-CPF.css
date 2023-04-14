@@ -50,10 +50,12 @@ input{
 
 .Clear{
     grid-area: clear;
+    background-color: #eb1c1c
 }
 
 .Search{
    grid-area: search;
+   background-color: #31d725;
     
 }
 
