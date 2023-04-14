@@ -11,21 +11,39 @@
 
 <body>
 
-    <img src="./GNDI_logo.png" />
+    <div class="container">
+        <img src="./assets/GNDI_logo.png" alt="GNDI_logo" />
 
-    <div class="wrapper">           
-            <button class="auto_atd"> Pronto Atendimento Preferencial </button>
-            <button class="auto_atd"> Auto Atendimento Agendado </button>
-            <br>
-            <button class="auto_atd"> Pronto Atendimento Prioritário <br> (Acima de 80 anos) </br> </button>
-            <button class="auto_atd"> Pronto Atendimento </button>
-            <br>
-            <button class="auto_atd"> Com Hora Marcada </button>
-            <button class="auto_atd"> Sem Hora Marcada </button>
-            <br>
-            <button class="auto_atd"> Exame Agendado </button>
-            <button class="auto_atd"> Outros </button>     
+        <div class="wrapper">
+            <button class="indexButtons" onclick="redirecionarEspecialidades()"> Pronto Atendimento Preferencial
+            </button> <!-- Clínico, ortopedia ou pediatria -->
+            <button class="indexButtons" onclick="redirecionarCPF()"> Auto Atendimento Agendado </button>
+            <!--Tela de CPF-->
+
+            <button class="indexButtons" onclick="redirectPriority()"> Pronto Atendimento Prioritário <br> (Acima de 80
+                anos) </br> <!-- Clínico, ortopedia ou pediatria -->
+            </button>
+            <button class="indexButtons" onclick="redirecionarEspecialidades()"> Pronto Atendimento </button>
+            <!-- Clínico, ortopedia ou pediatria -->
+
+            <button class="indexButtons"> Com Hora Marcada </button>
+            <button class="indexButtons"> Sem Hora Marcada </button>
+        </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    function redirecionarCPF() {
+        window.location.href = "cpf_paciente.html";
+    }
+
+    function redirecionarEspecialidades() {
+        window.location.href = "especialidades.html"
+    }
+
+    function redirectPriority() {
+        window.location.href = "especialidadesPrioritario.html"
+    }
+</script>

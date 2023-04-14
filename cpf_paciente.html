@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles-CPF.css">
+    <title>Auto Atendimento Agendado</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="./assets/GNDI_logo.png" alt="GNDI_logo" />
+        <p class="pacientCPF"> CPF ou carteirinha do paciente </p>
+        <div class="wrapButtons">
+            <input type="text" class="inputData" placeholder="Digite o CPF ou a Carteirinha" autofocus maxlength="19">
+
+            <button class="buttons Numbers" id="buttonOne"> 1 </button>
+            <button class="buttons Numbers" id="buttonTwo"> 2 </button>
+            <button class="buttons Numbers" id="buttonThree"> 3 </button>
+            <button class="buttons Numbers" id="buttonFour"> 4 </button>
+            <button class="buttons Numbers" id="buttonFive"> 5 </button>
+            <button class="buttons Numbers" id="buttonSix"> 6 </button>
+            <button class="buttons Numbers" id="buttonSeven"> 7 </button>
+            <button class="buttons Numbers" id="buttonEight"> 8 </button>
+            <button class="buttons Numbers" id="buttonNine"> 9 </button>
+            <button class="buttons Numbers" id="buttonZero"> 0 </button>
+            <button class="buttons Clear"> Limpar </button> <br>
+            <button class="buttons Search "> Pesquisar </button> <br>
+            <button onclick="window.history.back()" class="goBackButton buttons"> Voltar </button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    const buttons = document.querySelectorAll('.Numbers');
+    const input = document.querySelector('.inputData');
+    const buttonLimpar = document.querySelector('.Clear');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            input.value += button.textContent;
+        });
+    });
+
+    buttonLimpar.addEventListener('click', function () {
+        input.value = '';
+    });
+
+</script>
